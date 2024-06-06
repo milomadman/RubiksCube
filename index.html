@@ -1,0 +1,100 @@
+<DOCTYPE html>
+    <head>
+        <title>Rubik's Cube Website</title>
+        <script src="functions.js"></script>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+    </head>
+    <body >
+        <header class="header">
+            <h1 class="logo"><a href="index.html">Rubik's Cube</a></h1>
+        <ul class="main-nav">
+            <li><a href="index.html" style="background-color: rgb(198, 198, 198);">Home</a></li>
+            <li><a href="https://jperm.net/bld" target="_blank">Tutorial</a></li>
+        </ul>
+        </header>  
+
+        <div class="row">
+            <div class="column" id="text">
+                <button id ="showScrample" onclick="generateScramble()">Scramble the cube</button>
+                <button id ="unScramble" onclick="normalColors()">Back to normal</button>
+                <p id="scramble">&nbsp</p>
+                <!--<input id="customScramble"><br>-->
+                <button id ="getLetters" onclick="getSmLetters()">Generate Letters for blindfolded solving:</button>
+                <p id="letters">&nbsp</p>
+            </div>
+            
+            <div class="column" id="Cube">
+                <svg id="svg" viewBox="12 7 20 30" xmlns="http://www.w3.org/2000/svg">
+                    <g id="UFace" transform="translate(20,20)">
+                        <rect id="UBase" class="U Base"  x="0" y="0"/>
+                        <rect id="a" class="U Uside" x="0" y="-3"/>
+                        <rect id="b" class="U Uside" x="3" y="0"/>
+                        <rect id="c" class="U Uside" x="0" y="3"/>
+                        <rect id="d" class="U Uside" x="-3" y="0"/>
+                        <rect id="A" class="U Uedge" x="-3" y="-3"/>
+                        <rect id="B" class="U Uedge" x="3" y="-3"/>
+                        <rect id="C" class="U Uedge" x="3" y="3"/>
+                        <rect id="D" class="U Uedge" x="-3" y="3"/>
+                    </g>
+                    <g id="LFace" transform="translate(11,20)">
+                        <rect id="LBase" class="L Base"  x="0" y="0"/>
+                        <rect id="e" class="L" x="3" y="0"/>
+                        <rect id="f" class="L" x="0" y="3"/>
+                        <rect id="g" class="L" x="-3" y="0"/>
+                        <rect id="h" class="L" x="0" y="-3"/>
+                        <rect id="E" class="L" x="3" y="-3"/>
+                        <rect id="F" class="L" x="3" y="3"/>
+                        <rect id="G" class="L" x="-3" y="3"/>
+                        <rect id="H" class="L" x="-3" y="-3"/>
+                    </g>
+                    <g id="FFace" transform="translate(20,29)">
+                        <rect id="FBase" class="F Base"  x="0" y="0"/>
+                        <rect id="i" class="F Fside" x="0" y="-3"/>
+                        <rect id="j" class="F Fside" x="3" y="0"/>
+                        <rect id="k" class="F Fside" x="0" y="3"/>
+                        <rect id="l" class="F Fside" x="-3" y="0"/>
+                        <rect id="I" class="F Fedge" x="-3" y="-3"/>
+                        <rect id="J" class="F Fedge" x="3" y="-3"/>
+                        <rect id="K" class="F Fedge" x="3" y="3"/>
+                        <rect id="L" class="F Fedge" x="-3" y="3"/>
+                    </g>
+                    <g id="RFace" transform="translate(29,20)">
+                        <rect id="RBase" class="R Base"  x="0" y="0"/>
+                        <rect id="m" class="R Redge" x="-3" y="0"/>
+                        <rect id="n" class="R Redge" x="0" y="-3"/>
+                        <rect id="o" class="R Redge" x="3" y="0"/>
+                        <rect id="p" class="R Redge" x="0" y="3"/>
+                        <rect id="M" class="R Rside" x="-3" y="3"/>
+                        <rect id="N" class="R Rside" x="-3" y="-3"/>
+                        <rect id="O" class="R Rside" x="3" y="-3"/>
+                        <rect id="P" class="R Rside" x="3" y="3"/>
+                    </g>
+                    <g id="BFace" transform="translate(20,11)">
+                        <rect id="BBase" class="B Base"  x="0" y="0"/>
+                        <rect id="q" class="B Bedge" x="0" y="3"/>
+                        <rect id="r" class="B Bedge" x="-3" y="0"/>
+                        <rect id="s" class="B Bedge" x="0" y="-3"/>
+                        <rect id="t" class="B Bedge" x="3" y="0"/>
+                        <rect id="Q" class="B Bside" x="3" y="3"/>
+                        <rect id="R" class="B Bside" x="-3" y="3"/>
+                        <rect id="S" class="B Bside" x="-3" y="-3"/>
+                        <rect id="T" class="B Bside" x="3" y="-3"/>
+                    </g>    
+                    <g id="DFace" transform="translate(38,20)">
+                        <rect id="DBase" class="D Base"  x="0" y="0"/>
+                        <rect id="u" class="D" x="0" y="3"/>
+                        <rect id="v" class="D" x="-3" y="0"/>
+                        <rect id="w" class="D" x="0" y="-3"/>
+                        <rect id="x" class="D" x="3" y="0"/>
+                        <rect id="U" class="D" x="3" y="3"/>
+                        <rect id="V" class="D" x="-3" y="3"/>
+                        <rect id="W" class="D" x="-3" y="-3"/>
+                        <rect id="X" class="D" x="3" y="-3"/>
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+    </body>
+</html>
+</DOCTYPE>

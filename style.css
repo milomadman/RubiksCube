@@ -1,0 +1,192 @@
+span {
+color: "red";}
+
+
+label,p {color: rgb(200, 200, 200);}
+
+svg {
+	display: block;
+	background: transparent;	
+	max-width: 100%; /* Ensure the SVG does not exceed container width */
+	max-height: 100%;
+	width: 100%; /* Adjust the width of the SVG */
+	height: auto; /* Maintain aspect ratio */
+	z-index: 0; /* Ensure the SVG is behind the text */
+}
+
+#iscorrect {
+	margin:0;
+	position: absolute;
+	top: 7%; /* Adjust top position of the text */
+	left: 50%; /* Adjust left position of the text */
+	transform: translate(-50%, -50%); /* Center the text */
+	z-index: 1; /* Place the text above the SVG */
+}
+
+button {
+	background-color: black;
+	color: white;
+	font-size: large;
+	margin-right: 20px;
+	padding:5px;
+}
+
+p {
+	font-size: large;
+}
+
+
+.logo {
+	margin: 0;
+	font-size: 1.45em;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: auto; /* Reset explicit height if set */
+	margin: 0; /* Reset margins */
+	padding: 0; /* Reset paddings */
+}
+
+body {
+	background-color: rgb(40, 40,40);
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	height: auto;
+}
+
+rect {
+	height: 3px;
+	width: 3px;
+	stroke: black;
+	stroke-width: 0.3px;
+}
+
+
+
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h2, h3, a {
+	color: #34495e;
+}
+
+a {
+	text-decoration: none;
+}
+
+.main-nav {
+	margin-top: 5px;
+
+}
+
+.logo a, .main-nav a {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+
+.main-nav a {
+	color: #34495e;
+	font-size: .99em;
+}
+
+.main-nav a:hover {
+	color: #718daa;
+}
+
+.header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #a2a2a2;
+	background-color: #f4f4f4;
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.leftright {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 3pt;
+	/* Add other styles as needed */
+}
+
+.rightside {
+	order:2;
+}  
+
+
+
+input {
+	height:16pt;
+	width:40px;
+	color: white;
+	background-color: black;
+	text-align: right;
+}
+
+input[type="number"]#entereddigit + label {
+	/* Your CSS styles for the label here */
+	height: 50pt;
+	font-size: 40pt;
+	position: absolute;
+	/* Add other styles as needed */
+}
+
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+}
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}
+
+/* Remove number input arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* Hide arrows on Chrome and Safari */
+  margin: 0; /* Fix for Firefox */
+}
+
+#text {
+	margin-top: 30px;
+	margin-left: 30p
+	x;
+}
+
+.row{
+    display: flex;
+	height: 600px;
+	width: 100%;
+}
+
+.column {
+    padding: 3%;
+    height: 100%;
+	box-sizing: border-box; 
+}
+
+#Cube {
+	width: 60%;
+}
